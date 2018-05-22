@@ -20,11 +20,11 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    @operations = ["add" => :+, 
-                   "subtract" => :-, 
-                   "multiply" => :*, 
-                   "divide" => :/]
-    
+    @operations = [ "add" => :+,
+                    "subtract" => :-,
+                    "multiply" => :*,
+                    "divide" => :/  ]
+
     # @operation = params[:operation].to_sym
     # @number1 = params[:number1].to_i
     # @number2 = params[:number2].to_i
