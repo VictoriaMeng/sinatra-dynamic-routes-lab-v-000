@@ -33,6 +33,3 @@ class App < Sinatra::Base
     binding.pry
   end
 end
-
-
-
