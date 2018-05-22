@@ -25,10 +25,10 @@ class App < Sinatra::Base
                     "multiply" => :*,
                     "divide" => :/  ]
 
-    # @operation = params[:operation].to_sym
-    # @number1 = params[:number1].to_i
-    # @number2 = params[:number2].to_i
-    # "#{@number1.send(@operation, @number2)}"
+    @operation = @operations[params[:operation]]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
+    "#{@number1.send(@operation, @number2)}"
   end
 
 end
