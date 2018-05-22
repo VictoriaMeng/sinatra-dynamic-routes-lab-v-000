@@ -30,7 +30,7 @@ class App < Sinatra::Base
     @number1 = params[:number1].to_i
     @number2 = params[:number2].to_i
     "#{@number1.send(@operation, @number2)}"
-    binding 'pry'
+    binding.pry
   end
 
 end
